@@ -1,0 +1,521 @@
+Attaching to odfe-node1, odfe-kibana, odfe-node2, logstash
+[32modfe-node1    |[0m OpenDistro for Elasticsearch Security Demo Installer
+[32modfe-node1    |[0m  ** Warning: Do not use on production or public reachable systems **
+[32modfe-node1    |[0m Basedir: /usr/share/elasticsearch
+[32modfe-node1    |[0m Elasticsearch install type: rpm/deb on CentOS Linux release 7.8.2003 (Core)
+[32modfe-node1    |[0m Elasticsearch config dir: /usr/share/elasticsearch/config
+[32modfe-node1    |[0m Elasticsearch config file: /usr/share/elasticsearch/config/elasticsearch.yml
+[32modfe-node1    |[0m Elasticsearch bin dir: /usr/share/elasticsearch/bin
+[32modfe-node1    |[0m Elasticsearch plugins dir: /usr/share/elasticsearch/plugins
+[32modfe-node1    |[0m Elasticsearch lib dir: /usr/share/elasticsearch/lib
+[32modfe-node1    |[0m Detected Elasticsearch Version: x-content-7.9.1
+[32modfe-node1    |[0m Detected Open Distro Security Version: 1.11.0.0
+[32modfe-node1    |[0m 
+[32modfe-node1    |[0m ### Success
+[32modfe-node1    |[0m ### Execute this script now on all your nodes and then start all nodes
+[32modfe-node1    |[0m ### Open Distro Security will be automatically initialized.
+[32modfe-node1    |[0m ### If you like to change the runtime configuration 
+[32modfe-node1    |[0m ### change the files in ../securityconfig and execute: 
+[32modfe-node1    |[0m "/usr/share/elasticsearch/plugins/opendistro_security/tools/securityadmin.sh" -cd "/usr/share/elasticsearch/plugins/opendistro_security/securityconfig" -icl -key "/usr/share/elasticsearch/config/kirk-key.pem" -cert "/usr/share/elasticsearch/config/kirk.pem" -cacert "/usr/share/elasticsearch/config/root-ca.pem" -nhnv
+[32modfe-node1    |[0m ### or run ./securityadmin_demo.sh
+[32modfe-node1    |[0m ### To use the Security Plugin ConfigurationGUI
+[32modfe-node1    |[0m ### To access your secured cluster open https://<hostname>:<HTTP port> and log in with admin/admin.
+[32modfe-node1    |[0m ### (Ignore the SSL certificate warning because we installed self-signed demo certificates)
+[35modfe-node2    |[0m OpenDistro for Elasticsearch Security Demo Installer
+[35modfe-node2    |[0m  ** Warning: Do not use on production or public reachable systems **
+[35modfe-node2    |[0m Basedir: /usr/share/elasticsearch
+[35modfe-node2    |[0m Elasticsearch install type: rpm/deb on CentOS Linux release 7.8.2003 (Core)
+[35modfe-node2    |[0m Elasticsearch config dir: /usr/share/elasticsearch/config
+[35modfe-node2    |[0m Elasticsearch config file: /usr/share/elasticsearch/config/elasticsearch.yml
+[35modfe-node2    |[0m Elasticsearch bin dir: /usr/share/elasticsearch/bin
+[35modfe-node2    |[0m Elasticsearch plugins dir: /usr/share/elasticsearch/plugins
+[35modfe-node2    |[0m Elasticsearch lib dir: /usr/share/elasticsearch/lib
+[35modfe-node2    |[0m Detected Elasticsearch Version: x-content-7.9.1
+[35modfe-node2    |[0m Detected Open Distro Security Version: 1.11.0.0
+[35modfe-node2    |[0m 
+[35modfe-node2    |[0m ### Success
+[35modfe-node2    |[0m ### Execute this script now on all your nodes and then start all nodes
+[35modfe-node2    |[0m ### Open Distro Security will be automatically initialized.
+[35modfe-node2    |[0m ### If you like to change the runtime configuration 
+[35modfe-node2    |[0m ### change the files in ../securityconfig and execute: 
+[35modfe-node2    |[0m "/usr/share/elasticsearch/plugins/opendistro_security/tools/securityadmin.sh" -cd "/usr/share/elasticsearch/plugins/opendistro_security/securityconfig" -icl -key "/usr/share/elasticsearch/config/kirk-key.pem" -cert "/usr/share/elasticsearch/config/kirk.pem" -cacert "/usr/share/elasticsearch/config/root-ca.pem" -nhnv
+[35modfe-node2    |[0m ### or run ./securityadmin_demo.sh
+[35modfe-node2    |[0m ### To use the Security Plugin ConfigurationGUI
+[35modfe-node2    |[0m ### To access your secured cluster open https://<hostname>:<HTTP port> and log in with admin/admin.
+[35modfe-node2    |[0m ### (Ignore the SSL certificate warning because we installed self-signed demo certificates)
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:02Z","tags":["warning","plugins-discovery"],"pid":1,"message":"Expect plugin \"id\" in camelCase, but found: opendistro-notebooks-kibana"}
+[32modfe-node1    |[0m [2020-12-11T22:59:06,712][INFO ][o.e.n.Node               ] [odfe-node1] version[7.9.1], pid[1], build[oss/tar/083627f112ba94dffc1232e8b42b73492789ef91/2020-09-01T21:22:21.964974Z], OS[Linux/4.19.128-microsoft-standard/amd64], JVM[AdoptOpenJDK/OpenJDK 64-Bit Server VM/14.0.1/14.0.1+7]
+[32modfe-node1    |[0m [2020-12-11T22:59:06,718][INFO ][o.e.n.Node               ] [odfe-node1] JVM home [/opt/jdk]
+[32modfe-node1    |[0m [2020-12-11T22:59:06,719][INFO ][o.e.n.Node               ] [odfe-node1] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.locale.providers=SPI,COMPAT, -Xms1g, -Xmx1g, -XX:+UseG1GC, -XX:G1ReservePercent=25, -XX:InitiatingHeapOccupancyPercent=30, -Djava.io.tmpdir=/tmp/elasticsearch-17020050382008502790, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.security.policy=file:///usr/share/elasticsearch/performance-analyzer-rca/pa_config/es_security.policy, -Dclk.tck=100, -Djdk.attach.allowAttachSelf=true, -Des.cgroups.hierarchy.override=/, -Xms512m, -Xmx512m, -XX:MaxDirectMemorySize=268435456, -Des.path.home=/usr/share/elasticsearch, -Des.path.conf=/usr/share/elasticsearch/config, -Des.distribution.flavor=oss, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[35modfe-node2    |[0m [2020-12-11T22:59:07,462][INFO ][o.e.n.Node               ] [odfe-node2] version[7.9.1], pid[1], build[oss/tar/083627f112ba94dffc1232e8b42b73492789ef91/2020-09-01T21:22:21.964974Z], OS[Linux/4.19.128-microsoft-standard/amd64], JVM[AdoptOpenJDK/OpenJDK 64-Bit Server VM/14.0.1/14.0.1+7]
+[35modfe-node2    |[0m [2020-12-11T22:59:07,468][INFO ][o.e.n.Node               ] [odfe-node2] JVM home [/opt/jdk]
+[35modfe-node2    |[0m [2020-12-11T22:59:07,469][INFO ][o.e.n.Node               ] [odfe-node2] JVM arguments [-Xshare:auto, -Des.networkaddress.cache.ttl=60, -Des.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.locale.providers=SPI,COMPAT, -Xms1g, -Xmx1g, -XX:+UseG1GC, -XX:G1ReservePercent=25, -XX:InitiatingHeapOccupancyPercent=30, -Djava.io.tmpdir=/tmp/elasticsearch-7294303488903122434, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.security.policy=file:///usr/share/elasticsearch/performance-analyzer-rca/pa_config/es_security.policy, -Dclk.tck=100, -Djdk.attach.allowAttachSelf=true, -Des.cgroups.hierarchy.override=/, -Xms512m, -Xmx512m, -XX:MaxDirectMemorySize=268435456, -Des.path.home=/usr/share/elasticsearch, -Des.path.conf=/usr/share/elasticsearch/config, -Des.distribution.flavor=oss, -Des.distribution.type=tar, -Des.bundled_jdk=true]
+[32modfe-node1    |[0m [2020-12-11T22:59:10,120][INFO ][c.a.o.e.p.c.PluginSettings] [odfe-node1] Config: metricsLocation: /dev/shm/performanceanalyzer/, metricsDeletionInterval: 1, httpsEnabled: false, cleanup-metrics-db-files: true, batch-metrics-retention-period-minutes: 7
+[35modfe-node2    |[0m [2020-12-11T22:59:11,156][INFO ][c.a.o.e.p.c.PluginSettings] [odfe-node2] Config: metricsLocation: /dev/shm/performanceanalyzer/, metricsDeletionInterval: 1, httpsEnabled: false, cleanup-metrics-db-files: true, batch-metrics-retention-period-minutes: 7
+[32modfe-node1    |[0m [2020-12-11T22:59:12,016][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] ES Config path is /usr/share/elasticsearch/config
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:12Z","tags":["info","plugins-service"],"pid":1,"message":"Plugin \"telemetryManagementSection\" has been disabled since the following direct or transitive dependencies are missing or disabled: [telemetry]"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:12Z","tags":["info","plugins-service"],"pid":1,"message":"Plugin \"newsfeed\" is disabled."}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:12Z","tags":["info","plugins-service"],"pid":1,"message":"Plugin \"telemetry\" is disabled."}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:12Z","tags":["info","plugins-service"],"pid":1,"message":"Plugin \"visTypeXy\" is disabled."}
+[35modfe-node2    |[0m [2020-12-11T22:59:13,100][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] ES Config path is /usr/share/elasticsearch/config
+[32modfe-node1    |[0m [2020-12-11T22:59:13,132][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] JVM supports TLSv1.3
+[32modfe-node1    |[0m [2020-12-11T22:59:13,134][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] Config directory is /usr/share/elasticsearch/config/, from there the key- and truststore files are resolved relatively
+[33modfe-kibana   |[0m 
+[33modfe-kibana   |[0m   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+[33modfe-kibana   |[0m   and `regenerator-runtime/runtime` separately
+[35modfe-node2    |[0m [2020-12-11T22:59:14,060][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] JVM supports TLSv1.3
+[35modfe-node2    |[0m [2020-12-11T22:59:14,072][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] Config directory is /usr/share/elasticsearch/config/, from there the key- and truststore files are resolved relatively
+[32modfe-node1    |[0m [2020-12-11T22:59:14,114][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] TLS Transport Client Provider : JDK
+[32modfe-node1    |[0m [2020-12-11T22:59:14,115][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] TLS Transport Server Provider : JDK
+[32modfe-node1    |[0m [2020-12-11T22:59:14,115][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] TLS HTTP Provider             : JDK
+[32modfe-node1    |[0m [2020-12-11T22:59:14,117][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] Enabled TLS protocols for transport layer : [TLSv1.3, TLSv1.2, TLSv1.1]
+[32modfe-node1    |[0m [2020-12-11T22:59:14,118][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node1] Enabled TLS protocols for HTTP layer      : [TLSv1.3, TLSv1.2, TLSv1.1]
+[32modfe-node1    |[0m [2020-12-11T22:59:14,984][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] Clustername: odfe-cluster
+[32modfe-node1    |[0m [2020-12-11T22:59:14,993][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] Directory /usr/share/elasticsearch/config has insecure file permissions (should be 0700)
+[32modfe-node1    |[0m [2020-12-11T22:59:14,994][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/elasticsearch.yml has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:14,995][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/log4j2.properties has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:14,995][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/kirk-key.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:14,996][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/root-ca.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:14,996][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/kirk.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:15,017][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/esnode.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:15,018][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] File /usr/share/elasticsearch/config/esnode-key.pem has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:15,215][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] TLS Transport Client Provider : JDK
+[35modfe-node2    |[0m [2020-12-11T22:59:15,216][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] TLS Transport Server Provider : JDK
+[35modfe-node2    |[0m [2020-12-11T22:59:15,216][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] TLS HTTP Provider             : JDK
+[35modfe-node2    |[0m [2020-12-11T22:59:15,216][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] Enabled TLS protocols for transport layer : [TLSv1.3, TLSv1.2, TLSv1.1]
+[35modfe-node2    |[0m [2020-12-11T22:59:15,216][INFO ][c.a.o.s.s.DefaultOpenDistroSecurityKeyStore] [odfe-node2] Enabled TLS protocols for HTTP layer      : [TLSv1.3, TLSv1.2, TLSv1.1]
+[35modfe-node2    |[0m [2020-12-11T22:59:16,161][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] Clustername: odfe-cluster
+[35modfe-node2    |[0m [2020-12-11T22:59:16,171][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] Directory /usr/share/elasticsearch/config has insecure file permissions (should be 0700)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,171][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/elasticsearch.yml has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,172][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/log4j2.properties has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,173][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/kirk-key.pem has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,174][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/root-ca.pem has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,176][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/kirk.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:16,177][INFO ][c.a.o.j.JobSchedulerPlugin] [odfe-node1] Loaded scheduler extension: opendistro_anomaly_detector, index: .opendistro-anomaly-detector-jobs
+[35modfe-node2    |[0m [2020-12-11T22:59:16,176][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/esnode.pem has insecure file permissions (should be 0600)
+[35modfe-node2    |[0m [2020-12-11T22:59:16,208][WARN ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] File /usr/share/elasticsearch/config/esnode-key.pem has insecure file permissions (should be 0600)
+[32modfe-node1    |[0m [2020-12-11T22:59:16,410][INFO ][c.a.o.j.JobSchedulerPlugin] [odfe-node1] Loaded scheduler extension: opendistro-index-management, index: .opendistro-ism-config
+[32modfe-node1    |[0m [2020-12-11T22:59:16,423][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [aggs-matrix-stats]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,426][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [analysis-common]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,426][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [geo]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,427][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [ingest-common]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,427][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [ingest-geoip]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,427][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [ingest-user-agent]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,428][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [kibana]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,428][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [lang-expression]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,433][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [lang-mustache]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,434][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [lang-painless]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,435][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [mapper-extras]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,436][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [parent-join]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,439][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [percolator]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,439][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [rank-eval]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,440][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [reindex]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,442][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [repository-url]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,442][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [tasks]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,443][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded module [transport-netty4]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,445][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro-anomaly-detection]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,455][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro-job-scheduler]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,457][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro-knn]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,458][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro_alerting]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,458][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro_index_management]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,459][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro_performance_analyzer]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,459][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro_security]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,460][INFO ][o.e.p.PluginsService     ] [odfe-node1] loaded plugin [opendistro_sql]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,518][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node1] Disabled https compression by default to mitigate BREACH attacks. You can enable it by setting 'http.compression: true' in elasticsearch.yml
+[32modfe-node1    |[0m [2020-12-11T22:59:16,563][WARN ][o.e.d.c.s.Settings       ] [odfe-node1] [node.max_local_storage_nodes] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+[32modfe-node1    |[0m [2020-12-11T22:59:16,611][INFO ][o.e.e.NodeEnvironment    ] [odfe-node1] using [1] data paths, mounts [[/usr/share/elasticsearch/data (/dev/sdc)]], net usable_space [227.3gb], net total_space [250.9gb], types [ext4]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,612][INFO ][o.e.e.NodeEnvironment    ] [odfe-node1] heap size [512mb], compressed ordinary object pointers [true]
+[32modfe-node1    |[0m [2020-12-11T22:59:16,712][INFO ][o.e.n.Node               ] [odfe-node1] node name [odfe-node1], node ID [dXfl0whfTay3AgbrBMkDWg], cluster name [odfe-cluster]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,468][INFO ][c.a.o.j.JobSchedulerPlugin] [odfe-node2] Loaded scheduler extension: opendistro_anomaly_detector, index: .opendistro-anomaly-detector-jobs
+[35modfe-node2    |[0m [2020-12-11T22:59:17,661][INFO ][c.a.o.j.JobSchedulerPlugin] [odfe-node2] Loaded scheduler extension: opendistro-index-management, index: .opendistro-ism-config
+[35modfe-node2    |[0m [2020-12-11T22:59:17,668][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [aggs-matrix-stats]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,677][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [analysis-common]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,678][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [geo]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,679][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [ingest-common]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,682][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [ingest-geoip]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,683][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [ingest-user-agent]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,684][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [kibana]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,685][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [lang-expression]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,686][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [lang-mustache]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,686][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [lang-painless]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,697][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [mapper-extras]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,699][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [parent-join]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,701][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [percolator]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,702][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [rank-eval]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,702][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [reindex]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,705][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [repository-url]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,705][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [tasks]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,707][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded module [transport-netty4]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,710][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro-anomaly-detection]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,711][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro-job-scheduler]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,713][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro-knn]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,714][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro_alerting]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,715][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro_index_management]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,716][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro_performance_analyzer]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,717][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro_security]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,719][INFO ][o.e.p.PluginsService     ] [odfe-node2] loaded plugin [opendistro_sql]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,783][INFO ][c.a.o.s.OpenDistroSecurityPlugin] [odfe-node2] Disabled https compression by default to mitigate BREACH attacks. You can enable it by setting 'http.compression: true' in elasticsearch.yml
+[35modfe-node2    |[0m [2020-12-11T22:59:17,829][WARN ][o.e.d.c.s.Settings       ] [odfe-node2] [node.max_local_storage_nodes] setting was deprecated in Elasticsearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+[35modfe-node2    |[0m [2020-12-11T22:59:17,860][INFO ][o.e.e.NodeEnvironment    ] [odfe-node2] using [1] data paths, mounts [[/usr/share/elasticsearch/data (/dev/sdc)]], net usable_space [227.3gb], net total_space [250.9gb], types [ext4]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,867][INFO ][o.e.e.NodeEnvironment    ] [odfe-node2] heap size [512mb], compressed ordinary object pointers [true]
+[35modfe-node2    |[0m [2020-12-11T22:59:17,972][INFO ][o.e.n.Node               ] [odfe-node2] node name [odfe-node2], node ID [1HJR5RrQR6GmSe6sgxiwCQ], cluster name [odfe-cluster]
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:18Z","tags":["warning","legacy-service"],"pid":1,"message":"Some installed third party plugin(s) [opendistro-alerting, opendistro-anomaly-detection-kibana, opendistro-query-workbench, opendistro_index_management_kibana] are using the legacy plugin format and will no longer work in a future Kibana release. Please refer to https://ela.st/kibana-breaking-changes-8-0 for a list of breaking changes and https://ela.st/kibana-platform-migration for documentation on how to migrate legacy plugins."}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:19Z","tags":["info","plugins-system"],"pid":1,"message":"Setting up [38] plugins: [usageCollection,telemetryCollectionManager,kibanaUsageCollection,mapsLegacy,kibanaLegacy,timelion,share,legacyExport,esUiShared,charts,bfetch,expressions,data,home,console,apmOss,management,indexPatternManagement,advancedSettings,savedObjects,opendistroSecurity,visualizations,visualize,visTypeVislib,visTypeVega,visTypeTimeseries,visTypeTable,visTypeTagcloud,visTypeTimelion,visTypeMetric,visTypeMarkdown,tileMap,regionMap,inputControlVis,discover,dashboard,opendistro-notebooks-kibana,savedObjectsManagement]"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:19Z","tags":["info","savedobjects-service"],"pid":1,"message":"Waiting until all Elasticsearch nodes are compatible with Kibana before starting saved objects migrations..."}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:20Z","tags":["error","elasticsearch","data"],"pid":1,"message":"Request error, retrying\nGET https://odfe-node1:9200/_nodes?filter_path=nodes.*.version%2Cnodes.*.http.publish_address%2Cnodes.*.ip => connect ECONNREFUSED 172.21.0.2:9200"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:20Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:20Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:20Z","tags":["error","savedobjects-service"],"pid":1,"message":"Unable to retrieve version information from Elasticsearch nodes."}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:22Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:22Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:24Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:24Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[32modfe-node1    |[0m [2020-12-11T22:59:25,661][WARN ][c.a.o.s.c.Salt           ] [odfe-node1] If you plan to use field masking pls configure compliance salt e1ukloTsQlOgPquJ to be a random string of 16 chars length identical on all nodes
+[32modfe-node1    |[0m [2020-12-11T22:59:25,704][INFO ][c.a.o.s.a.i.AuditLogImpl ] [odfe-node1] Message routing enabled: true
+[32modfe-node1    |[0m [2020-12-11T22:59:25,863][INFO ][c.a.o.s.f.OpenDistroSecurityFilter] [odfe-node1] <NONE> indices are made immutable.
+[35modfe-node2    |[0m [2020-12-11T22:59:26,667][WARN ][c.a.o.s.c.Salt           ] [odfe-node2] If you plan to use field masking pls configure compliance salt e1ukloTsQlOgPquJ to be a random string of 16 chars length identical on all nodes
+[35modfe-node2    |[0m [2020-12-11T22:59:26,717][INFO ][c.a.o.s.a.i.AuditLogImpl ] [odfe-node2] Message routing enabled: true
+[35modfe-node2    |[0m [2020-12-11T22:59:26,959][INFO ][c.a.o.s.f.OpenDistroSecurityFilter] [odfe-node2] <NONE> indices are made immutable.
+[32modfe-node1    |[0m [2020-12-11T22:59:27,320][INFO ][c.a.o.a.b.ADCircuitBreakerService] [odfe-node1] Registered memory breaker.
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:27Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:27Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[35modfe-node2    |[0m [2020-12-11T22:59:28,394][INFO ][c.a.o.a.b.ADCircuitBreakerService] [odfe-node2] Registered memory breaker.
+[32modfe-node1    |[0m [2020-12-11T22:59:28,722][INFO ][o.e.d.DiscoveryModule    ] [odfe-node1] using discovery type [zen] and seed hosts providers [settings]
+[32modfe-node1    |[0m [2020-12-11T22:59:29,612][WARN ][o.e.g.DanglingIndicesState] [odfe-node1] gateway.auto_import_dangling_indices is disabled, dangling indices will not be automatically detected or imported and must be managed manually
+[35modfe-node2    |[0m [2020-12-11T22:59:29,668][INFO ][o.e.d.DiscoveryModule    ] [odfe-node2] using discovery type [zen] and seed hosts providers [settings]
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:29Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:29Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[32modfe-node1    |[0m [2020-12-11T22:59:30,228][INFO ][c.a.o.e.p.h.c.PerformanceAnalyzerConfigAction] [odfe-node1] PerformanceAnalyzer Enabled: false
+[32modfe-node1    |[0m [2020-12-11T22:59:30,565][INFO ][o.e.n.Node               ] [odfe-node1] initialized
+[32modfe-node1    |[0m [2020-12-11T22:59:30,566][INFO ][o.e.n.Node               ] [odfe-node1] starting ...
+[35modfe-node2    |[0m [2020-12-11T22:59:30,601][WARN ][o.e.g.DanglingIndicesState] [odfe-node2] gateway.auto_import_dangling_indices is disabled, dangling indices will not be automatically detected or imported and must be managed manually
+[32modfe-node1    |[0m [2020-12-11T22:59:30,906][INFO ][o.e.t.TransportService   ] [odfe-node1] publish_address {172.21.0.2:9300}, bound_addresses {0.0.0.0:9300}
+[35modfe-node2    |[0m [2020-12-11T22:59:31,311][INFO ][c.a.o.e.p.h.c.PerformanceAnalyzerConfigAction] [odfe-node2] PerformanceAnalyzer Enabled: false
+[32modfe-node1    |[0m [2020-12-11T22:59:31,408][INFO ][o.e.b.BootstrapChecks    ] [odfe-node1] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[32modfe-node1    |[0m ERROR: [1] bootstrap checks failed
+[32modfe-node1    |[0m [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[32modfe-node1    |[0m ERROR: Elasticsearch did not exit normally - check the logs at /usr/share/elasticsearch/logs/odfe-cluster.log
+[32modfe-node1    |[0m [2020-12-11T22:59:31,440][INFO ][c.a.o.s.a.r.AuditMessageRouter] [odfe-node1] Closing AuditMessageRouter
+[32modfe-node1    |[0m [2020-12-11T22:59:31,440][INFO ][o.e.n.Node               ] [odfe-node1] stopping ...
+[32modfe-node1    |[0m [2020-12-11T22:59:31,442][INFO ][c.a.o.s.a.s.SinkProvider ] [odfe-node1] Closing InternalESSink
+[32modfe-node1    |[0m [2020-12-11T22:59:31,442][INFO ][c.a.o.s.a.s.SinkProvider ] [odfe-node1] Closing DebugSink
+[32modfe-node1    |[0m [2020-12-11T22:59:31,505][INFO ][o.e.n.Node               ] [odfe-node1] stopped
+[32modfe-node1    |[0m [2020-12-11T22:59:31,506][INFO ][o.e.n.Node               ] [odfe-node1] closing ...
+[32modfe-node1    |[0m [2020-12-11T22:59:31,522][INFO ][c.a.o.s.a.i.AuditLogImpl ] [odfe-node1] Closing AuditLogImpl
+[32modfe-node1    |[0m [2020-12-11T22:59:31,544][INFO ][o.e.n.Node               ] [odfe-node1] closed
+[35modfe-node2    |[0m [2020-12-11T22:59:31,583][INFO ][o.e.n.Node               ] [odfe-node2] initialized
+[35modfe-node2    |[0m [2020-12-11T22:59:31,584][INFO ][o.e.n.Node               ] [odfe-node2] starting ...
+[35modfe-node2    |[0m [2020-12-11T22:59:31,809][INFO ][o.e.t.TransportService   ] [odfe-node2] publish_address {172.21.0.3:9300}, bound_addresses {0.0.0.0:9300}
+[35modfe-node2    |[0m [2020-12-11T22:59:32,192][INFO ][o.e.b.BootstrapChecks    ] [odfe-node2] bound or publishing to a non-loopback address, enforcing bootstrap checks
+[35modfe-node2    |[0m ERROR: [1] bootstrap checks failed
+[35modfe-node2    |[0m [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[35modfe-node2    |[0m ERROR: Elasticsearch did not exit normally - check the logs at /usr/share/elasticsearch/logs/odfe-cluster.log
+[35modfe-node2    |[0m [2020-12-11T22:59:32,206][INFO ][c.a.o.s.a.r.AuditMessageRouter] [odfe-node2] Closing AuditMessageRouter
+[35modfe-node2    |[0m [2020-12-11T22:59:32,210][INFO ][c.a.o.s.a.s.SinkProvider ] [odfe-node2] Closing InternalESSink
+[35modfe-node2    |[0m [2020-12-11T22:59:32,211][INFO ][c.a.o.s.a.s.SinkProvider ] [odfe-node2] Closing DebugSink
+[35modfe-node2    |[0m [2020-12-11T22:59:32,210][INFO ][o.e.n.Node               ] [odfe-node2] stopping ...
+[35modfe-node2    |[0m [2020-12-11T22:59:32,257][INFO ][o.e.n.Node               ] [odfe-node2] stopped
+[35modfe-node2    |[0m [2020-12-11T22:59:32,257][INFO ][o.e.n.Node               ] [odfe-node2] closing ...
+[35modfe-node2    |[0m [2020-12-11T22:59:32,270][INFO ][c.a.o.s.a.i.AuditLogImpl ] [odfe-node2] Closing AuditLogImpl
+[35modfe-node2    |[0m [2020-12-11T22:59:32,278][INFO ][o.e.n.Node               ] [odfe-node2] closed
+[32modfe-node1 exited with code 78
+[0m[35modfe-node2 exited with code 78
+[0m[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:35Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:35Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m Sending Logstash logs to /usr/share/logstash/logs which is now configured via log4j2.properties
+[36mlogstash      |[0m [2020-12-11T22:59:40,759][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[36mlogstash      |[0m [2020-12-11T22:59:40,786][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.dead_letter_queue", :path=>"/usr/share/logstash/data/dead_letter_queue"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:40Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:40Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T22:59:41,424][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.0.1"}
+[36mlogstash      |[0m [2020-12-11T22:59:41,526][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"44451ca8-902c-4f87-9cbc-8748d49a7c06", :path=>"/usr/share/logstash/data/uuid"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:45Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:45Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T22:59:49,663][WARN ][logstash.outputs.elasticsearch] ** WARNING ** Detected UNSAFE options in elasticsearch output configuration!
+[36mlogstash      |[0m ** WARNING ** You have enabled encryption but DISABLED certificate verification.
+[36mlogstash      |[0m ** WARNING ** To make sure your data is secure change :ssl_certificate_verification to true
+[36mlogstash      |[0m [2020-12-11T22:59:50,174][INFO ][logstash.outputs.elasticsearch] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[https://logstash:xxxxxx@odfe-node1:9200/]}}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:50Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:50Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T22:59:51,542][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[36mlogstash      |[0m [2020-12-11T22:59:51,590][INFO ][logstash.outputs.elasticsearch] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["https://odfe-node1:9200"]}
+[36mlogstash      |[0m [2020-12-11T22:59:51,628][INFO ][logstash.javapipeline    ] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>8, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1000, :thread=>"#<Thread:0x34881efb run>"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,147][INFO ][logstash.javapipeline    ] Pipeline started {"pipeline.id"=>"main"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,186][INFO ][logstash.inputs.http     ] Starting http input listener {:address=>"0.0.0.0:5011", :ssl=>"false"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,211][INFO ][logstash.inputs.tcp      ] Starting tcp input listener {:address=>"0.0.0.0:5013", :ssl_enable=>"false"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,303][INFO ][logstash.inputs.udp      ] Starting UDP listener {:address=>"0.0.0.0:5012"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,462][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[36mlogstash      |[0m [2020-12-11T22:59:52,558][INFO ][logstash.inputs.udp      ] UDP listener started {:address=>"0.0.0.0:5012", :receive_buffer_bytes=>"106496", :queue_size=>"2000"}
+[36mlogstash      |[0m [2020-12-11T22:59:52,959][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:55Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:55Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T22:59:56,623][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T22:59:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:00Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:00Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:02,653][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:05Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:05Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:06,664][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:10Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:10Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:11,673][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:17,700][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:21,712][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:26,724][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:32,740][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:36,749][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:41,757][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:47,771][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:51,781][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:00:56,788][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:00:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:02,804][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:06,820][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:11,830][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:17,847][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:21,852][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:26,862][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:32,878][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:36,885][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:41,893][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:47,910][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:51,918][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:01:56,929][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:01:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:02,946][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:06,957][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:11,966][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:17,983][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:21,993][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:27,002][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:33,019][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:37,026][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:42,034][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:48,051][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:52,057][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:02:57,065][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:02:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:03,080][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:07,087][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:12,095][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:18,112][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:18Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:21Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:22,120][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:23Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:26Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:27,130][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:28Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:31Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:33,145][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:33Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:36Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:37,152][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:38Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:41Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:42,160][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:43Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:46Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:48,177][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:48Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:51Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:52,185][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:53Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:56Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:03:57,193][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:03:58Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:01Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:04:03,211][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1: Name or service not known"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:03Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:06Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:04:07,222][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:08Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:11Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[36mlogstash      |[0m [2020-12-11T23:04:12,233][WARN ][logstash.outputs.elasticsearch] Attempted to resurrect connection to dead ES instance, but got an error. {:url=>"https://logstash:xxxxxx@odfe-node1:9200/", :error_type=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :error=>"Elasticsearch Unreachable: [https://logstash:xxxxxx@odfe-node1:9200/][Manticore::ResolutionFailure] odfe-node1"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:13Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"Unable to revive connection: https://odfe-node1:9200/"}
+[33modfe-kibana   |[0m {"type":"log","@timestamp":"2020-12-11T23:04:16Z","tags":["warning","elasticsearch","data"],"pid":1,"message":"No living connections"}
